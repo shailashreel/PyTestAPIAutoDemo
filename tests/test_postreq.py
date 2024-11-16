@@ -1,6 +1,7 @@
 import requests
+import json
 
-class ATestPostRequest:
+class TestPostRequest:
     def test_post_request(self):
         #Req base URL
         base_url = "https://jsonplaceholder.typicode.com"
@@ -18,7 +19,7 @@ class ATestPostRequest:
 
         #Asserting the response with expected values
         assert response.status_code == 201
-        assert response.json()['userId'] == 1
+        assert response.json()['userId'] == '1'
         assert response.json()['id'] == 101
         assert response.json()['title'] == 'foo'
         assert response.json()['body'] == 'bar'
